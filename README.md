@@ -78,7 +78,7 @@ This repository is optimized for deployment to **Cloudflare Pages** as a high-pe
    - `NODE_VERSION`: `20` (or `18`)
 7. Click **Save and Deploy**. Cloudflare Pages will automatically build and distribute the app on Cloudflare's global edge network.
 
-> **Note on Routing**: The repository includes `public/_redirects` which instructs Cloudflare Pages to redirect all routes to `index.html` (HTTP 200), ensuring single-page routing works seamlessly on deep page refreshes.
+> **Note on Routing**: Single-page application routing is natively handled by Cloudflare via `not_found_handling = "single-page-application"` in `wrangler.toml`, eliminating the need for any `_redirects` file and preventing infinite redirect loops.
 
 ---
 
