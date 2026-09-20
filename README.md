@@ -100,6 +100,9 @@ A `wrangler.toml` file is included in the project root:
 name = "weather-intelligence"
 compatibility_date = "2024-09-01"
 pages_build_output_dir = "dist"
+
+[assets]
+directory = "./dist"
 ```
 
 ---
