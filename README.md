@@ -91,18 +91,20 @@ You can also deploy directly from your local terminal using Cloudflare Wrangler:
 npm install
 npm run build
 
-# 2. Deploy to Cloudflare Pages using Wrangler
-npx wrangler pages deploy dist --project-name=weather-intelligence
+# 2. Deploy using Wrangler
+npx wrangler deploy
+# Or for Pages
+npx wrangler pages deploy dist --project-name=weather-intelligence-3
 ```
 
 A `wrangler.toml` file is included in the project root:
 ```toml
-name = "weather-intelligence"
+name = "weather-intelligence-3"
 compatibility_date = "2024-09-01"
-pages_build_output_dir = "dist"
 
 [assets]
 directory = "./dist"
+not_found_handling = "single-page-application"
 ```
 
 ---
